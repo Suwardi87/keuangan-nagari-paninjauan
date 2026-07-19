@@ -1,12 +1,11 @@
 <?php
-$docRoot = rtrim($_SERVER['DOCUMENT_ROOT'] ?? '', '/');
-$appDir = dirname(__DIR__);
-if ($docRoot && strpos($appDir, $docRoot) === 0) {
+$docRoot = rtrim(str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT'] ?? ''), '/');
+$appDir  = str_replace('\\', '/', dirname(__DIR__));
+if ($docRoot !== '' && strpos($appDir, $docRoot) === 0) {
     $baseDir = substr($appDir, strlen($docRoot));
 } else {
     $baseDir = '';
 }
-$baseDir = str_replace('\\', '/', $baseDir);
 define('BASE_URL', $baseDir);
 define('DB_HOST', '127.0.0.1');
 define('DB_NAME', 'paninjauan');
