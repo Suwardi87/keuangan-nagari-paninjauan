@@ -7,8 +7,12 @@ function rupiah(float $angka): string {
     return 'Rp ' . number_format($angka, 0, ',', '.');
 }
 
+function url(string $path): string {
+    return BASE_URL . $path;
+}
+
 function redirect(string $path): void {
-    header('Location: ' . $path);
+    header('Location: ' . url($path));
     exit;
 }
 

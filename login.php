@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Login - Keuangan Nagari Paninjauan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="/assets/css/style.css" rel="stylesheet">
+    <link href="<?= BASE_URL ?>/assets/css/style.css" rel="stylesheet">
     <style>
         body { background: #0f172a; min-height: 100vh; overflow: hidden; }
 
@@ -363,7 +363,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             <?php endif; ?>
 
-            <form method="POST" action="/login.php">
+            <form method="POST" action="<?= BASE_URL ?>/login.php">
                 <div class="mb-3 position-relative form-floating-custom">
                     <input type="text" name="username" class="form-control" id="username"
                            placeholder="Username" required autofocus

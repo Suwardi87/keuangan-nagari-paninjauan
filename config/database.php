@@ -1,4 +1,9 @@
 <?php
+$appDir = dirname(__DIR__);
+$docRoot = $_SERVER['DOCUMENT_ROOT'];
+$baseDir = str_replace($docRoot, '', $appDir);
+$baseDir = str_replace('\\', '/', $baseDir);
+define('BASE_URL', rtrim($baseDir, '/'));
 define('DB_HOST', '127.0.0.1');
 define('DB_NAME', 'paninjauan');
 define('DB_USER', 'root');

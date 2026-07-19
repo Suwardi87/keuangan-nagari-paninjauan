@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../config/database.php';
 session_start();
 
 function isLoggedIn(): bool {
@@ -7,7 +8,7 @@ function isLoggedIn(): bool {
 
 function requireLogin(): void {
     if (!isLoggedIn()) {
-        header('Location: /login.php');
+        header('Location: ' . BASE_URL . '/login.php');
         exit;
     }
 }

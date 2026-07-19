@@ -85,12 +85,12 @@ require_once __DIR__ . '/../includes/header.php';
                         <tr><td class="text-muted">Kabupaten</td><td><?= e($profil['kabupaten']) ?></td></tr>
                         <tr><td class="text-muted">Provinsi</td><td><?= e($profil['provinsi']) ?></td></tr>
                     </table>
-                    <a href="/admin/profil.php" class="btn btn-outline-success btn-sm">
+                    <a href="<?= BASE_URL ?>/admin/profil.php" class="btn btn-outline-success btn-sm">
                         <i class="bi bi-pencil-square me-1"></i>Edit Profil
                     </a>
                 <?php else: ?>
                     <p class="text-muted">Belum ada data profil.</p>
-                    <a href="/admin/profil.php" class="btn btn-success btn-sm">
+                    <a href="<?= BASE_URL ?>/admin/profil.php" class="btn btn-success btn-sm">
                         <i class="bi bi-plus-circle me-1"></i>Tambah Profil
                     </a>
                 <?php endif; ?>
@@ -124,12 +124,12 @@ require_once __DIR__ . '/../includes/header.php';
                             </tbody>
                         </table>
                     </div>
-                    <a href="/admin/keuangan.php" class="btn btn-outline-success btn-sm">
+                    <a href="<?= BASE_URL ?>/admin/keuangan.php" class="btn btn-outline-success btn-sm">
                         <i class="bi bi-arrow-right me-1"></i>Lihat Semua
                     </a>
                 <?php else: ?>
                     <p class="text-muted">Belum ada data keuangan.</p>
-                    <a href="/admin/keuangan.php" class="btn btn-success btn-sm">
+                    <a href="<?= BASE_URL ?>/admin/keuangan.php" class="btn btn-success btn-sm">
                         <i class="bi bi-plus-circle me-1"></i>Tambah Data
                     </a>
                 <?php endif; ?>

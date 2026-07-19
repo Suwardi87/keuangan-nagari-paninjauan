@@ -52,7 +52,7 @@ require_once __DIR__ . '/../includes/header.php';
                     </div>
                 <?php endif; ?>
 
-                <form method="POST" action="/admin/profil.php">
+                <form method="POST" action="<?= BASE_URL ?>/admin/profil.php">
                     <h6 class="text-success fw-bold mb-3"><i class="bi bi-geo-alt me-1"></i>Identitas Nagari</h6>
                     <div class="row g-3 mb-4">
                         <div class="col-md-6">
@@ -113,7 +113,7 @@ require_once __DIR__ . '/../includes/header.php';
                         <button type="submit" class="btn btn-success">
                             <i class="bi bi-check-lg me-1"></i>Simpan
                         </button>
-                        <a href="/admin/dashboard.php" class="btn btn-outline-secondary">Kembali</a>
+                        <a href="<?= BASE_URL ?>/admin/dashboard.php" class="btn btn-outline-secondary">Kembali</a>
                     </div>
                 </form>
             </div>
